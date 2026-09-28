@@ -1,0 +1,92 @@
+body {
+    background-color: #D152DC;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: clamp(0px, 19.53vw, 375px);
+}
+.header {
+    display: flex;
+    align-items: flex-start;
+    padding: 29px 36% 0 0;
+    gap: clamp(35px, 6.2vw, 119px);
+}
+.logo {
+    flex-shrink: 0;
+}
+.nav {
+    flex-shrink: 0;
+    margin-top: 23px;
+}
+.nav-list {
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+}
+.hero {
+    display: flex;
+}
+.hero-content {
+    margin-right: 29.04%;
+    position: relative;
+}
+.hero-title {
+    padding:53.92px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 600px;
+}
+.hero-text {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.344;
+    max-width: 970px;
+}
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    padding: 13px 25px 17px 25px;
+    max-width: 321px;
+    margin-top: 30px;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #D152DC;
+    border-radius: 18px;
+    font-size: 32px;
+    line-height: normal;
+    border: 1px solid #fff;
+    box-shadow: 4px 9px 35px rgba(226, 225, 226, 0.58);
+}
+.logo-background {
+    position: absolute;
+    right: 0;
+    top: 26px;
+    z-index: -1;
+}
+.hero-media {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 38.698%;
+    height: 97.59%;
+    z-index: 0;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+}
+.hero-img,
+.logo-background {
+  pointer-events: none; 
+  user-select: none;       
+  -webkit-user-drag: none; 
+}
