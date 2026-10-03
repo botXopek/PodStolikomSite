@@ -16,6 +16,9 @@
         <a href="index.html" class="logo">
             <img src="./images/PS.svg" alt="Логотип PodStolikom Gaming">
         </a>
+        <button class="burger" type="button" aria-label="Меню">
+            <img src="./images/menu.svg" alt="">
+        </button>
         <nav class="nav">
             <ul class="nav-list" role="list">
                 <li class="nav-item"><a href="#" class="nav-link">Главная</a></li>
@@ -36,7 +39,7 @@
                     У "Подстоликом" уже есть составы по CS:GO, Hearthstone, APEX Legends и Fortnite, 
                     которые уже добились успехов на киберспортивной сцене.</p>
                 <a href="https://www.donationalerts.com/r/bot_xopek" class="btn">
-                    Поддержать ребят
+                    Поддержать<br>ребят
                 </a>
             </div>
             
@@ -45,5 +48,21 @@
     <div class="hero-media">
         <img src="./images/jleha.png" alt="Леха Слундер" class="hero-img" draggable="false"> 
     </div>
+    <script>
+        const burger = document.querySelector('.burger');
+        const burgerImg = burger.querySelector('img');
+        const nav = document.querySelector('.nav');
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('is-open');
+            burgerImg.src = isOpen ? './images/menuExit.svg' : './images/menu.svg';
+        });
+        document.addEventListener('click', (event) => {
+            const isClickInside = burger.contains(event.target) || nav.contains(event.target);
+            if (!isClickInside && nav.classList.contains('is-open')) {
+                nav.classList.remove('is-open');
+                burgerImg.src = './images/menu.svg';
+            }
+        });
+    </script>
 </body>
 </html>
